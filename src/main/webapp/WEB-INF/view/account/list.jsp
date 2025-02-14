@@ -7,7 +7,7 @@
 <div class="col-sm-8">
 	<h2>계좌목록(인증)</h2>
 	<h5>Bank App에 오신걸 환영합니다</h5>
-	
+
 	<c:choose>
 		<c:when test="${accountList != null}">
 			<%-- 계좌 존재 : html 주석을 사용하면 오류 발생 (jstl 태그 안에서)  --%>
@@ -25,7 +25,7 @@
 							<td>${account.formatKoreanWon(account.balance)}</td>
 						</tr>
 					</c:forEach>
-				</tbody>	
+				</tbody>
 			</table>
 		</c:when>
 		<c:otherwise>
@@ -34,7 +34,7 @@
 			</div>
 		</c:otherwise>
 	</c:choose>
-		
+
 </div>
 <!-- end of col-sm-8  -->
 </div>
@@ -43,6 +43,5 @@
 
 <!-- footer.jsp  -->
 <%@ include file="/WEB-INF/view/layout/footer.jsp"%>
-
 
 
