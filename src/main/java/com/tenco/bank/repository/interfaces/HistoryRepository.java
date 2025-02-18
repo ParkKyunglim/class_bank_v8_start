@@ -21,6 +21,10 @@ public interface HistoryRepository {
     // 단일 계좌 거래 내역 조회 (동적 쿼리 사용)
     public List<HistoryAccountDTO>
     findByAccountIdAndTypeOfHistory(@Param("type") String type,
-                                    @Param("accountId") Integer accountId);
+                                    @Param("accountId") Integer accountId,
+                                    @Param("limit") int limit,
+                                    @Param("offset") int offset);
 
+    public int countHistoryAccountIdAndType(@Param("type")String type,
+                                            @Param("accountId")Integer accountId);
 }
