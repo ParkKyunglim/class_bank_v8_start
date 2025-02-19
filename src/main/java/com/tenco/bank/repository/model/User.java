@@ -18,8 +18,8 @@ public class User {
     private String username;
     private String password;
     private String fullname;
-    private String orginFileName;
     private String uploadFileName;
+    private String originFileName;
     private Timestamp createdAt;
 
     public String setUpUserImage() {
