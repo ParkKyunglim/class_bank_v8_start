@@ -39,7 +39,6 @@ public class UserService {
         // 보안 및 사용자 경험 측면에서 민감한 정보를 노출하지 않도록 합니다.
         int result = 0;
         // 회원 가입시 insert 처리 O/U
-        System.out.println(dto.getCustomFile().getOriginalFilename());
         if(dto.getCustomFile() != null && !dto.getCustomFile().isEmpty()) {
             // 파일 업로드 로직 구현
             String[] fileNames = uploadFile(dto.getCustomFile());
@@ -141,6 +140,14 @@ public class UserService {
 
 
         return new String[] { mFile.getOriginalFilename(), uploadFileName };
+    }
+    /**
+     * 코드 추가
+     * @param username
+     * @return
+     */
+    public User searchUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
  }
