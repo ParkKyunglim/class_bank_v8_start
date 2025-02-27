@@ -162,7 +162,7 @@ public class UserController {
                 OAuthToken.class
         );
         // 응답 받은 액세스 토큰 출력 (디버깅 용)
-        System.out.println("tokenResponse : " + tokenResponse.getBody().getAccessToken());
+//        System.out.println("tokenResponse : " + tokenResponse.getBody().getAccessToken());
 
         // 3. 사용자 정보 API 요청을 해야 한다.
         // https://kapi.kakao.com/v2/user/me
@@ -213,7 +213,7 @@ public class UserController {
         // 경우에 수
         // searchUsername --> User 객체 생성, null 값이 들어 오든 !
         User user = userService.searchUsername(signUpDTO.getUsername());
-        // 문제에 원인
+        // 문제 원인
         // --> 최초 소셜로그인 시에 회원 가입까지 정상 동작
         // --> 자동 로그인 처리 (세션에 유저 정보 등록 실패 --> 다시 로그인 하라)
         // --> 최초 접근시라도 자동 로그인 처리 해야 한다.
